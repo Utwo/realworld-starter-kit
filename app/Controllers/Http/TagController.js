@@ -1,5 +1,5 @@
 'use strict'
-const { transformer } = require('../../Transformers/Transformer')
+const { transformer } = use('@transformer')
 
 const Tag = use('App/Models/Tag')
 
