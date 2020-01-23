@@ -1,29 +1,27 @@
 'use strict'
 
 const { test, trait } = use('Test/Suite')('Login')
-const User = use('App/Models/User')
+const Factory = use('Factory')
 
 trait('Test/ApiClient')
 
 test('login user', async ({ client }) => {
-  const newUser = await User.create({
-    username: 'johnjacob',
-    email: 'test@test.com',
-    password: '123123'
-  })
+  const user = await Factory.model('App/Models/User').create()
 
-  const response = await client.post('/users/login').send({
+  const data = {
     user: {
-      email: newUser.email,
-      password: '123123'
+      email: user.email,
+      password: 'secret'
     }
-  }).end()
+  }
+
+  const response = await client.post('/users/login').send(data).end()
 
   response.assertStatus(200)
   response.assertJSONSubset({
     user: {
-      email: newUser.email,
-      username: newUser.username
+      email: user.email,
+      username: user.username
     }
   })
 })
