@@ -1,4 +1,6 @@
-const { test, trait } = use('Test/Suite')('User')
+'use strict'
+
+const { test, trait } = use('Test/Suite')('Login')
 const User = use('App/Models/User')
 
 trait('Test/ApiClient')
