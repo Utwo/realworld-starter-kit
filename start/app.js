@@ -46,7 +46,8 @@ const aceProviders = [
 |
 */
 const aliases = {
-  '@helper/string': 'App/Helpers/string'
+  '@helper/string': 'App/Helpers/string',
+  '@transformer': 'App/Transformers/Transformer'
 }
 
 /*
