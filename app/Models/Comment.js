@@ -3,12 +3,11 @@
 const BaseModel = use('App/Models/BaseModel')
 
 class Comment extends BaseModel {
-
-  article() {
+  article () {
     return this.belongsTo('App/Models/Article')
   }
 
-  author() {
+  author () {
     return this.belongsTo('App/Models/User')
   }
 }

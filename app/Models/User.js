@@ -3,8 +3,7 @@
 const Model = use('Model')
 
 class User extends Model {
-
-  static boot() {
+  static boot () {
     super.boot()
     /**
      * A hook to hash the user password before saving
@@ -16,44 +15,43 @@ class User extends Model {
     this.addHook('beforeSave', 'User.hashPassword')
   }
 
-  static get hidden() {
+  static get hidden () {
     return ['email', 'password', 'followers']
   }
 
-  static get createdAtColumn() {
+  static get createdAtColumn () {
     return 'createdAt'
   }
 
-  static get updatedAtColumn() {
+  static get updatedAtColumn () {
     return 'updatedAt'
   }
 
-  static formatDates(field, value) {
+  static formatDates (field, value) {
     return value
   }
 
-  static castDates(field, value) {
+  static castDates (field, value) {
     return value
   }
 
-  comments() {
+  comments () {
     return this.hasMany('App/Models/Comment')
   }
 
-  favorite() {
+  favorite () {
     return this.belongsToMany('App/Models/Article')
   }
 
-  following() {
+  following () {
     return this.belongsToMany('App/Models/User', 'follower_id', 'followed_id')
       .pivotTable('follows')
   }
 
-  followers() {
+  followers () {
     return this.belongsToMany('App/Models/User', 'followed_id', 'follower_id')
       .pivotTable('follows')
   }
-
 }
 
 module.exports = User

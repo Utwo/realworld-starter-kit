@@ -57,6 +57,6 @@ module.exports = (cli, runner) => {
     | original state
     |
     */
-     await ace.call('migration:reset')
+    await ace.call('migration:reset')
   })
 }

@@ -15,14 +15,12 @@
 
 const Route = use('Route')
 
-
 Route.post('users/login', 'AuthController.login')
 Route.post('users', 'AuthController.register').validator('StoreUser')
 
 Route.get('tags', 'TagController.index')
 
 Route.group(() => {
-
   Route.get('articles/feed', 'ArticleController.feed')
   Route.post('articles', 'ArticleController.store').validator('StoreArticle')
   Route.put('articles/:slug', 'ArticleController.update')
