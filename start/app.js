@@ -45,7 +45,9 @@ const aceProviders = [
 |   { Route: 'Adonis/Src/Route' }
 |
 */
-const aliases = { }
+const aliases = {
+  '@helper/string': 'App/Helpers/string'
+}
 
 /*
 |--------------------------------------------------------------------------
