@@ -1,5 +1,5 @@
 'use strict'
-const { transformer } = require('../../Transformers/Transformer')
+const { transformer } = use('@transformer')
 
 class UserController {
   async index ({ auth }) {
