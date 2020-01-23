@@ -14,7 +14,7 @@ const Server = use('Server')
 const globalMiddleware = [
   'Adonis/Middleware/BodyParser',
   'App/Middleware/ChangeBearerToken',
-  'App/Middleware/SpoofAccept',
+  'App/Middleware/SpoofAccept'
 ]
 
 /*

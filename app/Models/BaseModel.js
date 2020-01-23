@@ -3,20 +3,19 @@
 const Model = use('Model')
 
 class BaseModel extends Model {
-
-  static get createdAtColumn() {
+  static get createdAtColumn () {
     return 'createdAt'
   }
 
-  static get updatedAtColumn() {
+  static get updatedAtColumn () {
     return 'updatedAt'
   }
 
-  static formatDates(field, value) {
+  static formatDates (field, value) {
     return value
   }
 
-  static castDates(field, value) {
+  static castDates (field, value) {
     return value
   }
 }
