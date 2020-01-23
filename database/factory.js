@@ -17,7 +17,7 @@ Factory.blueprint('App/Models/User', (faker) => {
   return {
     username: faker.username(),
     email: faker.email(),
-    password: faker.string(),
+    password: 'secret',
     bio: faker.string()
   }
 })
