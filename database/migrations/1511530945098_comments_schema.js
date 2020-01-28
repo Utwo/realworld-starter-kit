@@ -19,7 +19,6 @@ class CommentsSchema extends Schema {
       table.foreign('article_id')
         .references('articles.id')
         .onDelete('cascade')
-
     })
   }
 

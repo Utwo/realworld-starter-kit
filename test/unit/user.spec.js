@@ -1,9 +1,9 @@
-const {test, trait} = use('Test/Suite')('User')
+const { test, trait } = use('Test/Suite')('User')
 const User = use('App/Models/User')
 
 trait('Test/ApiClient')
 
-test('login user', async ({client}) => {
+test('login user', async ({ client }) => {
   const newUser = await User.create({
     username: 'johnjacob',
     email: 'test@test.com',

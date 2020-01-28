@@ -1,14 +1,18 @@
 class CustomFormatter {
   constructor () {
-    this.errors = {errors: {}}
+    this.errors = { errors: {} }
   }
 
   addError (error, field) {
     console.log(error)
-    if(this.errors.errors[field]) {
+
+    if (this.errors.errors[field]) {
       return this.errors.errors[field].push(error)
     }
-    return this.errors.errors[field] = [error]
+
+    this.errors.errors[field] = [error]
+
+    return this.errors.errors[field]
   }
 
   toJSON () {

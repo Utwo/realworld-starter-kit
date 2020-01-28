@@ -9,7 +9,7 @@ class StoreComment {
 
   get rules () {
     return {
-      'body': 'required',
+      body: 'required'
     }
   }
 

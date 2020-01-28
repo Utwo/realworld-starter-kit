@@ -3,16 +3,15 @@
 const Model = use('Model')
 
 class Tag extends Model {
-
   static get dates () {
     return []
   }
 
-  static get createdAtColumn() {
+  static get createdAtColumn () {
     return ''
   }
 
-  static get updatedAtColumn() {
+  static get updatedAtColumn () {
     return ''
   }
 
