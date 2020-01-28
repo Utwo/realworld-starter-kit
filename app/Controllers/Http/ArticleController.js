@@ -1,6 +1,7 @@
 'use strict'
-const { uppercaseFirst } = require('../../Helpers/string')
-const { transformer } = require('../../Transformers/Transformer')
+
+const { uppercaseFirst } = use('@helper/string')
+const { transformer } = use('@transformer')
 
 const Article = use('App/Models/Article')
 const Tag = use('App/Models/Tag')

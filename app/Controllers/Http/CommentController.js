@@ -1,7 +1,6 @@
 'use strict'
 
-const { transformer } = require('../../Transformers/Transformer')
-
+const { transformer } = use('@transformer')
 const Comment = use('App/Models/Comment')
 const Article = use('App/Models/Article')
 
