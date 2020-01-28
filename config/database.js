@@ -29,7 +29,7 @@ module.exports = {
   sqlite: {
     client: 'sqlite3',
     connection: {
-      filename: Env.get('SQLITE_FILENAME') ? Helpers.databasePath(Env.get('SQLITE_FILENAME')) :Helpers.databasePath('development.sqlite')
+      filename: Env.get('SQLITE_FILENAME') ? Helpers.databasePath(Env.get('SQLITE_FILENAME')) : Helpers.databasePath('development.sqlite')
     },
     useNullAsDefault: true,
     debug: Env.get('DB_DEBUG', false)
